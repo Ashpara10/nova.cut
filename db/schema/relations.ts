@@ -3,7 +3,7 @@ import { user } from "./auth";
 import { projects, assets } from "./projects";
 import { jobs, jobStages } from "./jobs";
 import { scriptVersions, scriptSegments } from "./scripts";
-import { userBilling, creditTransactions, jobCosts } from "./billing";
+import { subscription, creditTransaction } from "./billing";
 import { renders } from "./renders";
 
 export const userRelations = relations(user, ({ many }) => ({
@@ -53,28 +53,17 @@ export const scriptSegmentRelations = relations(scriptSegments, ({ one }) => ({
   }),
 }));
 
-export const userBillingRelations = relations(userBilling, ({ one }) => ({
+export const userBillingRelations = relations(subscription, ({ one }) => ({
   user: one(user, {
-    fields: [userBilling.userId],
+    fields: [subscription.userId],
     references: [user.id],
   }),
 }));
 
-export const creditTransactionsRelations = relations(creditTransactions, ({ one }) => ({
+export const creditTransactionsRelations = relations(creditTransaction, ({ one }) => ({
   user: one(user, {
-    fields: [creditTransactions.userId],
+    fields: [creditTransaction.userId],
     references: [user.id],
-  }),
-  project: one(projects, {
-    fields: [creditTransactions.projectId],
-    references: [projects.id],
-  }),
-}));
-
-export const jobCostsRelations = relations(jobCosts, ({ one }) => ({
-  job: one(jobs, {
-    fields: [jobCosts.jobId],
-    references: [jobs.id],
   }),
 }));
 
