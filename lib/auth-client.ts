@@ -1,5 +1,5 @@
 import { env } from "@/env";
-import { dodopaymentsClient } from "@dodopayments/better-auth";
+import { dodopaymentsClient } from "@dodopayments/better-auth/client";
 import { genericOAuthClient } from "better-auth/client/plugins";
 import { createAuthClient } from "better-auth/react";
 
