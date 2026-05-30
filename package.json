@@ -9,15 +9,24 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@dodopayments/better-auth": "^1.6.3",
+    "@t3-oss/env-nextjs": "^0.13.11",
+    "better-auth": "^1.6.12",
+    "dodopayments": "^2.32.0",
+    "drizzle-orm": "^0.45.2",
     "next": "16.2.6",
+    "pg": "^8.21.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.20.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "drizzle-kit": "^0.31.10",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",
